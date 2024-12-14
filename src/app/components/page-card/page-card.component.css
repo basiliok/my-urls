@@ -1,23 +1,26 @@
 .page-card {
-  border: 1px solid #e0e0e0;
+  background-color: black;
+  border-radius: 0.5rem;
   width: 15rem;
   height: 4rem;
   padding: 0.5rem;
+  gap: 0.5rem;
   .image {
-    border: 1px solid orange;
+    background-color: rgb(75, 65, 46);
+    border-radius: 0.5rem;
     width: 3rem;
     height: 3rem;
   }
-  .content{
-    width: 11rem;
+  .content {
+    width: 10.5rem;
     height: 3rem;
-    border: 1px solid red;
-    .label{
-        height: 1.5rem;
+    background-color: saddlebrown;
+    .label {
+      height: 1.5rem;
     }
-    .url{
-        height: 1.5rem;
-        background-color: brown;
+    .url {
+      height: 1.5rem;
+      background-color: brown;
     }
   }
 }
