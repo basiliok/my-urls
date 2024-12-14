@@ -1,10 +1,12 @@
+/* root hace referencia a la etiqueta HTML
+ * para que ocupe todo el alto por ejemplo se debe empezar definiendo el alto aca.
+ */
 :root {
   /* por defecto oscuro*/
-
   /* claro */
-
   /* scrollbar general (HTML) */
   color-scheme: dark;
+  height: 100%;
 }
 [data-color-scheme='dark'] {
   color-scheme: dark;
@@ -19,6 +21,10 @@
   font-family: 'Segoe UI', Tahoma, sans-serif;
   font-size: 13px;
   line-height: 1.2rem;
+}
+
+body {
+  height: 100%;
 }
 
 /* app-home,
