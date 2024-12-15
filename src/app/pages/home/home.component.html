@@ -1,11 +1,5 @@
-<div class="home d-flex-column gap-9">
-    <app-page-card/>
-    <app-page-card/>
-    <app-page-card/>
-    <app-page-card/>
-    <app-page-card/>
-    <app-page-card/>
-    <app-page-card/>
-    <app-page-card/>
-    <app-page-card/>
+<div class="home">
+  @for (numero of numeros; track $index) {
+  <app-page-card [inputNumber]="numero" />
+  }
 </div>

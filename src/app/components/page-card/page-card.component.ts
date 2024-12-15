@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-page-card',
   standalone: true,
   imports: [],
   templateUrl: './page-card.component.html',
-  styleUrl: './page-card.component.css'
+  styleUrl: './page-card.component.css',
 })
 export class PageCardComponent {
-
+  @Input() inputNumber: number = 0;
 }
