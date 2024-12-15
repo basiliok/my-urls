@@ -1,5 +1,5 @@
 <div class="home">
-  @for (numero of numeros; track $index) {
-  <app-page-card [inputNumber]="numero" />
+  @for (contentPageCard of contentPageCards; track $index) {
+  <app-page-card [inputPageCard]="contentPageCard" />
   }
 </div>

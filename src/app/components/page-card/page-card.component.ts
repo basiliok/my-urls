@@ -1,5 +1,10 @@
 import { Component, Input } from '@angular/core';
 
+interface PageCard {
+  label: string;
+  url: string;
+}
+
 @Component({
   selector: 'app-page-card',
   standalone: true,
@@ -8,5 +13,18 @@ import { Component, Input } from '@angular/core';
   styleUrl: './page-card.component.css',
 })
 export class PageCardComponent {
-  @Input() inputNumber: number = 0;
+  @Input() inputPageCard: PageCard = { label: 'Mi pagina', url: 'https://www.google.co.uk/' };
+  cleanUrl: string = '';
+
+  ngOnInit(): void {
+    this.cleanUrl = this.sanitizeUrl();
+  }
+
+  sanitizeUrl(): string {
+    let url = this.inputPageCard.url.replace(/^(https?:\/\/)/, '');
+    if (url.endsWith('/')) {
+      url = url.slice(0, -1);
+    }
+    return url;
+  }
 }

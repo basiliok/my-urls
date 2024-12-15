@@ -1,7 +1,7 @@
-<a class="page-card d-flex-row" href="https://www.google.co.uk/">
+<a class="page-card d-flex-row" [href]="inputPageCard.url">
   <div class="image"></div>
   <div class="content d-flex-column">
-    <div class="label">{{ inputNumber }} {{ 'paledot01' }}</div>
-    <div class="url">www.googleeeeeeee.co.uk</div>
+    <div class="label">{{ inputPageCard.label }}</div>
+    <div class="url">{{ cleanUrl }}</div>
   </div>
 </a>
