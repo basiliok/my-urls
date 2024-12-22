@@ -1,5 +1,3 @@
-<div class="home">
-  @for (contentPageCard of contentPageCards; track $index) {
-  <app-page-card [inputPageCard]="contentPageCard" />
-  }
-</div>
+@for (contentPageCard of contentPageCards; track $index) {
+<app-page-card [inputPageCard]="contentPageCard" />
+}

@@ -1,10 +1,16 @@
 .page-card {
   text-decoration: none;
   border-radius: 0.5rem;
-  width: 16rem;
+  width: 17rem;
   height: 4rem;
   padding: 0.5rem;
   gap: 0.5rem;
+  color: white;
+  box-shadow: 1px 1px 5px 1px #13131354;
+  background-color: #b6b6b62c;
+
+  backdrop-filter: blur(4px);
+  border: 1px solid #e9e9e94f;
 
   &:hover {
     background-color: rgb(77, 77, 77);
@@ -20,7 +26,7 @@
     height: 3rem;
   }
   .content {
-    width: 11.5rem;
+    width: 12.5rem;
     height: 3rem;
     /* background-color: saddlebrown; */
     .label {
