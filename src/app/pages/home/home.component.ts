@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { PageCardComponent } from '../../components/page-card/page-card.component';
 
 interface PageCard {
@@ -59,7 +59,4 @@ export class HomeComponent {
     { label: 'Excalidraw', url: 'https://excalidraw.com/' },
     { label: 'Draw.io', url: 'https://app.diagrams.net/' },
   ];
-
-  private cacheName = 'cache-storage-image';
-  private readonly storage = inject(Storage);
 }
