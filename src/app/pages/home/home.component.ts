@@ -4,6 +4,7 @@ import { PageCardComponent } from '../../components/page-card/page-card.componen
 interface PageCard {
   label: string;
   url: string;
+  iconName?: string;
 }
 
 @Component({
@@ -19,8 +20,8 @@ export class HomeComponent {
     { label: 'Pimsleur (Ingles)', url: 'https://learn.pimsleur.com/Learn' },
     { label: 'Cibertec', url: 'https://www.cibertec.edu.pe/' },
     { label: 'Cibertec Blackboard', url: 'https://cibertec.blackboard.com' },
-    { label: 'Analytics Google', url: 'https://analytics.google.com/analytics/web' },
-    { label: 'Firebase', url: 'https://firebase.google.com/' },
+    { label: 'Analytics Google', url: 'https://analytics.google.com/analytics/web', iconName: 'googleanalytics' },
+    { label: 'Firebase', url: 'https://firebase.google.com/', iconName: 'firebase' },
     { label: 'Google Adsense', url: 'https://adsense.google.com/start/' },
     { label: 'Google Search Console', url: 'https://search.google.com/search-console' },
     { label: 'Office', url: 'https://www.office.com/' },
@@ -33,8 +34,8 @@ export class HomeComponent {
     { label: 'Portal Azure', url: 'https://portal.azure.com/' },
     { label: 'WhatsApp Web', url: 'https://web.whatsapp.com/' },
     { label: 'Telegram Web', url: 'https://web.telegram.org/' },
-    { label: 'My Github (Main)', url: 'https://github.com/paledot01' },
-    { label: 'My Github (Secondary)', url: 'https://github.com/paledot02' },
+    { label: 'My Github (Main)', url: 'https://github.com/paledot01', iconName: 'github' },
+    { label: 'My Github (Secondary)', url: 'https://github.com/paledot02', iconName: 'github' },
     { label: 'Github icon', url: 'https://github-emoji-picker.vercel.app/' },
     { label: 'QuickType (transform JSON)', url: 'https://quicktype.io/' },
     { label: 'Transform Tools (JSON to Java)', url: 'https://transform.tools/json-to-java' },
