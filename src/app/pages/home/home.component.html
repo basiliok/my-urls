@@ -1,3 +1,5 @@
-@for (contentPageCard of contentPageCards; track $index) {
+@for (section of sections; track $index) {
+<div class="section">{{ section.title }}</div>
+@for (contentPageCard of section.pageCards; track $index) {
 <app-page-card [inputPageCard]="contentPageCard" />
-}
+} }
