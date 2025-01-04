@@ -4,7 +4,8 @@ import { PageCardComponent } from '../../components/page-card/page-card.componen
 interface PageCard {
   label: string;
   url: string;
-  iconName?: string;
+  animatedIcon?: string;
+  staticIcon?: string;
 }
 
 interface Section {
@@ -24,12 +25,13 @@ export class HomeComponent {
     {
       title: 'PROGRAMACIÓN',
       pageCards: [
+        { label: 'YouTube', url: 'https://www.youtube.com/', animatedIcon: 'youtube' },
         { label: 'Cursos de Dev en PDF', url: 'https://manual-informatica.com/download-file.html' },
         { label: 'Pimsleur (Ingles)', url: 'https://learn.pimsleur.com/Learn' },
         { label: 'Cibertec', url: 'https://www.cibertec.edu.pe/' },
         { label: 'Cibertec Blackboard', url: 'https://cibertec.blackboard.com' },
-        { label: 'Analytics Google', url: 'https://analytics.google.com/analytics/web', iconName: 'googleanalytics' },
-        { label: 'Firebase', url: 'https://firebase.google.com/', iconName: 'firebase' },
+        { label: 'Analytics Google', url: 'https://analytics.google.com/analytics/web', animatedIcon: 'googleanalytics' },
+        { label: 'Firebase', url: 'https://firebase.google.com/', animatedIcon: 'firebase' },
         { label: 'Google Adsense', url: 'https://adsense.google.com/start/' },
         { label: 'Google Search Console', url: 'https://search.google.com/search-console' },
       ],
@@ -52,8 +54,8 @@ export class HomeComponent {
       pageCards: [
         { label: 'WhatsApp Web', url: 'https://web.whatsapp.com/' },
         { label: 'Telegram Web', url: 'https://web.telegram.org/' },
-        { label: 'My Github (Main)', url: 'https://github.com/paledot01', iconName: 'github' },
-        { label: 'My Github (Secondary)', url: 'https://github.com/paledot02', iconName: 'github' },
+        { label: 'My Github (Main)', url: 'https://github.com/paledot01', animatedIcon: 'github' },
+        { label: 'My Github (Secondary)', url: 'https://github.com/paledot02', animatedIcon: 'github' },
         { label: 'Github icon', url: 'https://github-emoji-picker.vercel.app/' },
         { label: 'QuickType (transform JSON)', url: 'https://quicktype.io/' },
         { label: 'Transform Tools (JSON to Java)', url: 'https://transform.tools/json-to-java' },

@@ -1,13 +1,15 @@
-import { Component, inject, Input, Type, viewChild, ViewContainerRef } from '@angular/core';
+import { Component, ElementRef, Input, Renderer2, Type, viewChild, ViewContainerRef } from '@angular/core';
 import { SvgFirebaseComponent } from '../../svg/svg-firebase/svg-firebase.component';
 import { SvgGithubComponent } from '../../svg/svg-github/svg-github.component';
 import { SvgDefaultComponent } from '../../svg/svg-default/svg-default.component';
 import { SvgGoogleAnalyticsComponent } from '../../svg/svg-google-analytics/svg-google-analytics.component';
+import { SvgYoutubeComponent } from '../../svg/svg-youtube/svg-youtube.component';
 
 interface PageCard {
   label: string;
   url: string;
-  iconName?: string;
+  animatedIcon?: string;
+  staticIcon?: string;
 }
 
 @Component({
@@ -18,9 +20,11 @@ interface PageCard {
   styleUrl: './page-card.component.css',
 })
 export class PageCardComponent {
-  @Input() inputPageCard: PageCard = { label: 'Mi pagina', url: 'https://www.google.co.uk/', iconName: 'default' };
+  @Input() inputPageCard: PageCard = { label: 'Mi pagina', url: 'https://www.google.co.uk/', staticIcon: 'default' };
 
-  vcr = viewChild('container', { read: ViewContainerRef });
+  vcr = viewChild.required('container', { read: ViewContainerRef });
+  imageTag = viewChild.required('imageTag', { read: ElementRef });
+
   cleanUrl: string = '';
 
   private componentMap: { [key: string]: Type<any> } = {
@@ -28,20 +32,35 @@ export class PageCardComponent {
     googleanalytics: SvgGoogleAnalyticsComponent,
     github: SvgGithubComponent,
     default: SvgDefaultComponent,
+    youtube: SvgYoutubeComponent,
   };
 
+  constructor(private renderer: Renderer2) {}
+
   ngOnInit(): void {
-    this.createComponente();
+    this.createSvgIcon();
     this.cleanUrl = this.sanitizeUrl();
   }
 
-  createComponente() {
-    const svgIconName = this.inputPageCard.iconName || 'default';
-    this.vcr()?.createComponent(this.componentMap[svgIconName]);
+  createSvgIcon() {
+    const svgIconName = this.inputPageCard.animatedIcon;
+    const svgStatic = this.inputPageCard.staticIcon;
+    if (svgIconName) {
+      this.vcr().createComponent(this.componentMap[svgIconName]);
+      this.renderer.setStyle(this.imageTag().nativeElement, 'display', 'none');
+    } else if (svgStatic) {
+      this.renderer.setAttribute(this.imageTag().nativeElement, 'src', `svg/${svgStatic}.svg`);
+      this.renderer.setAttribute(this.imageTag().nativeElement, 'alt', `${svgStatic} icon`);
+    } else {
+      this.renderer.setAttribute(this.imageTag().nativeElement, 'src', 'svg/default.svg');
+      this.renderer.setAttribute(this.imageTag().nativeElement, 'alt', `world icon`);
+      this.renderer.setStyle(this.imageTag().nativeElement, 'width', '2.5rem');
+      this.renderer.setStyle(this.imageTag().nativeElement, 'height', '2.4rem');
+    }
   }
 
   sanitizeUrl(): string {
-    let url = this.inputPageCard.url.replace(/^(https?:\/\/)/, '');
+    let url = this.inputPageCard.url.replace(/^(https?:\/\/)?(www\.)?/, '');
     if (url.endsWith('/')) {
       url = url.slice(0, -1);
     }

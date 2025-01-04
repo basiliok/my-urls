@@ -16,5 +16,16 @@ app-page-card {
 .section {
   grid-row: span 3;
   color: rgb(197, 197, 197);
-  font-size: 0.85rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3rem;
+  span {
+    font-size: 0.85rem;
+  }
+  .separator {
+    height: 1px;
+    width: 100%;
+    background-color: rgb(197, 197, 197);
+  }
 }

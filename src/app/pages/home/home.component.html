@@ -1,5 +1,10 @@
 @for (section of sections; track $index) {
-<div class="section">{{ section.title }}</div>
+<div class="section">
+  <span>
+    {{ section.title }}
+  </span>
+  <div class="separator"></div>
+</div>
 @for (contentPageCard of section.pageCards; track $index) {
 <app-page-card [inputPageCard]="contentPageCard" />
 } }
