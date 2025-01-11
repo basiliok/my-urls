@@ -22,10 +22,11 @@ app-page-card {
   gap: 0.3rem;
   span {
     font-size: 0.85rem;
+    flex-grow: 0;
   }
   .separator {
     height: 1px;
-    width: 100%;
+    flex-grow: 1;
     background-color: rgb(197, 197, 197);
   }
 }
