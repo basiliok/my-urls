@@ -1,12 +1,31 @@
 :host {
+  display: flex;
   height: 100%;
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(auto-fill, 17rem);
-  grid-template-rows: repeat(auto-fill, 0.4rem); /* alto card : 4rem */
-  column-gap: 1rem;
-  row-gap: 0.1rem;
+  width: 100%;
   overflow-x: auto;
+}
+.wrapper-main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  min-width: fit-content;
+  padding: 2rem 1rem;
+  justify-content: center;
+  .wrapper {
+    display: flex;
+    height: 100%;
+    max-width: fit-content;
+    .content {
+      height: 100%;
+      max-width: fit-content;
+      display: grid;
+      grid-auto-flow: column;
+      grid-template-columns: repeat(auto-fill, 17rem);
+      grid-template-rows: repeat(auto-fill, 0.4rem); /* alto card : 4rem */
+      column-gap: 1rem;
+      row-gap: 0.1rem;
+    }
+  }
 }
 
 app-page-card {

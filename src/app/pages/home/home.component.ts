@@ -41,7 +41,11 @@ export class HomeComponent {
           url: 'https://analytics.google.com/analytics/web',
           animatedIcon: 'googleanalytics',
         },
-        { label: 'Google Search Console', url: 'https://search.google.com/search-console', staticIcon: 'googlesearchconsole' },
+        {
+          label: 'Google Search Console',
+          url: 'https://search.google.com/search-console',
+          staticIcon: 'googlesearchconsole',
+        },
         { label: 'Google Adsense', url: 'https://adsense.google.com/start/', staticIcon: 'googleadsense' },
         { label: 'Namecheap', url: 'https://www.namecheap.com/', staticIcon: 'namecheap' },
       ],
@@ -49,6 +53,7 @@ export class HomeComponent {
     {
       title: 'TRABAJO',
       pageCards: [
+        { label: 'Linkedin', url: 'https://www.linkedin.com/', staticIcon: 'linkedin' },
         { label: 'Jira', url: 'https://id.atlassian.com/login', staticIcon: 'jira' },
         { label: 'Slack', url: 'https://slack.com/', staticIcon: 'slack' },
         { label: 'Portal Azure', url: 'https://portal.azure.com/', staticIcon: 'azureportal' },
@@ -88,6 +93,7 @@ export class HomeComponent {
         { label: 'Font Awesome (Icons)', url: 'https://fontawesome.com/' },
         { label: 'Github icon', url: 'https://github-emoji-picker.vercel.app/' },
         { label: 'Icons Free', url: 'https://icon-icons.com/es/' },
+        { label: 'Vector Logo', url: 'https://worldvectorlogo.com/' },
       ],
     },
     {
@@ -107,9 +113,8 @@ export class HomeComponent {
       ],
     },
     {
-      title: 'DESARROLLO',
+      title: 'EXTRA',
       pageCards: [
-
         { label: 'Torrent', url: 'https://www.1377x.to/' },
         { label: 'Torrent 2', url: 'https://kickasstorrents.to/' },
         { label: 'Torrent 3', url: 'https://www.limetorrents.lol/' },
