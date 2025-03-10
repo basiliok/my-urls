@@ -30,6 +30,10 @@ export class HomeComponent {
       ],
     },
     {
+      title: 'INGLES',
+      pageCards: [{ label: 'Wordz', url: 'https://wordz.my/' }],
+    },
+    {
       title: 'DESARROLLO',
       pageCards: [
         { label: 'My Github (Main)', url: 'https://github.com/paledot01', animatedIcon: 'github' },
@@ -71,6 +75,7 @@ export class HomeComponent {
     {
       title: 'HERRAMIENTAS',
       pageCards: [
+        { label: 'BsCounter', url: 'https://bscounter.com/' },
         { label: 'Figma', url: 'https://www.figma.com/' },
         { label: 'Translate Google', url: 'https://translate.google.com/', staticIcon: 'googletranslate' },
         { label: 'Deepl (Traductor)', url: 'https://www.deepl.com/translator' },
