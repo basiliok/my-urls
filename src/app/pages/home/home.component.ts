@@ -31,7 +31,7 @@ export class HomeComponent {
     },
     {
       title: 'INGLES',
-      pageCards: [{ label: 'Wordz', url: 'https://wordz.my/' }],
+      pageCards: [{ label: 'Wordz', url: 'https://wordz.my/home' }],
     },
     {
       title: 'DESARROLLO',
