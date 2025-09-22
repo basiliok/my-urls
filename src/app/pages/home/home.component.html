@@ -1,16 +1,18 @@
 <div class="wrapper-main">
-  <div class="wrapper">
-    <div class="content">
-      @for (section of sections; track $index) {
-      <div class="section">
-        <span>
-          {{ section.title }}
-        </span>
-        <div class="separator"></div>
-      </div>
-      @for (contentPageCard of section.pageCards; track $index) {
-      <app-page-card [inputPageCard]="contentPageCard" />
-      } }
+    <div class="wrapper">
+        <div class="content">
+            @for (section of sections; track $index) {
+            <div class="section">
+                <span>
+                    {{ section.title }}
+                </span>
+                <div class="separator"></div>
+            </div>
+            @for (contentPageCard of section.pageCards; track $index) {
+            <app-page-card [inputPageCard]="contentPageCard" />
+            } }
+        </div>
     </div>
-  </div>
 </div>
+<div class="autor autor-left">autor: Kevin Basilio</div>
+<div class="autor autor-right">github: basiliok</div>
