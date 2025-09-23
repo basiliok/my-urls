@@ -2,6 +2,10 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.5.
 
+**Link Preview:** [links.kevinbasilio.com](https://links.kevinbasilio.com)
+
+![Screenshot](public/webp/p19_img3.webp)
+
 ## Config subdomain Azure Static Web App
 
 1. Tener un proyecto con el dominio principal configurado en un Static Web App.
